@@ -21,8 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ac9b1299-0e56-4ab1-b053-5c4ca0cfbccf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/brain-games.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/brain-games.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +44,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.eslintrc.yml" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunAnythingCache">
@@ -62,6 +71,11 @@
       <workItem from="1605082608951" duration="171000" />
       <workItem from="1605131477809" duration="2865000" />
       <workItem from="1605213253258" duration="2460000" />
+      <workItem from="1605216374827" duration="612000" />
+      <workItem from="1605285928142" duration="650000" />
+      <workItem from="1605286584096" duration="1165000" />
+      <workItem from="1605287844250" duration="298000" />
+      <workItem from="1605304394047" duration="378000" />
     </task>
     <servers />
   </component>
@@ -81,12 +95,22 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="185" y="100" key="SettingsEditor" timestamp="1605134659543">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="583" y="359" key="#ESLint" timestamp="1605287830886">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="583" y="359" key="#ESLint/0.25.1440.875@0.25.1440.875" timestamp="1605287830886" />
+    <state x="508" y="222" key="FileChooserDialogImpl" timestamp="1605287818082">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="508" y="222" key="FileChooserDialogImpl/0.25.1440.875@0.25.1440.875" timestamp="1605287818082" />
+    <state x="137" y="82" key="SettingsEditor" timestamp="1605287221887">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="185" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1605134659543" />
+    <state x="137" y="82" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1605287221887" />
     <state x="385" y="211" key="run.anything.popup" timestamp="1605214470726">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
