@@ -9,3 +9,12 @@ publish:
 
 lint:
 	npx eslint .
+
+run:
+	bin/nodejs-package.js 10
+	
+install-deps:
+	npm ci
+	
+test-coverage:
+	npm test -- --coverage --coverageProvider=v8
