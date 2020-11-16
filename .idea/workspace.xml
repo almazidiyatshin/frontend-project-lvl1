@@ -28,10 +28,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ac9b1299-0e56-4ab1-b053-5c4ca0cfbccf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/brain-even.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/brain-even.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/brain-games.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/brain-games.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +86,7 @@
       <workItem from="1605470718263" duration="1455000" />
       <workItem from="1605545203832" duration="1074000" />
       <workItem from="1605546809396" duration="4761000" />
-      <workItem from="1605551815624" duration="1857000" />
+      <workItem from="1605551815624" duration="2952000" />
     </task>
     <servers />
   </component>
