@@ -15,3 +15,8 @@ Game process:
 ##### Start: `make brain-calc`
 Game process:
 [![asciicast](https://asciinema.org/a/UPW2PClBAsut9LubMDr6NFJ9i.svg)](https://asciinema.org/a/UPW2PClBAsut9LubMDr6NFJ9i)
+
+## 3. Brain Gcd
+##### Start: `make brain-gcd`
+Game process:
+[![asciicast](https://asciinema.org/a/Jli9qn8P13BMAktNwsw55KeSR.svg)](https://asciinema.org/a/Jli9qn8P13BMAktNwsw55KeSR)
