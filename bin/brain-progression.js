@@ -24,7 +24,8 @@ const getProgression = () => {
 const getProgressionWithoutElement = (hiddenItem) => {
   const hiddenIndex = getRandomNum(0, 9);
   const progression = getProgression();
-  hiddenItem[0] = progression[hiddenIndex];
+  const temp = hiddenItem;
+  temp[0] = progression[hiddenIndex];
   progression[hiddenIndex] = '..';
   return progression.join(' ');
 };
