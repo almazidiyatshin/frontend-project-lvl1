@@ -25,3 +25,8 @@ Game process:
 ##### Start: `make brain-progression`
 Game process:
 [![asciicast](https://asciinema.org/a/lg9KocphAtmmD5QC9xL12S15g.svg)](https://asciinema.org/a/lg9KocphAtmmD5QC9xL12S15g)
+
+## 5. Brain Prime
+##### Start: `make brain-prime`
+Game process:
+[![asciicast](https://asciinema.org/a/pxhYaZ9PSCJcpPX0kwiuhkaOM.svg)](https://asciinema.org/a/pxhYaZ9PSCJcpPX0kwiuhkaOM)
