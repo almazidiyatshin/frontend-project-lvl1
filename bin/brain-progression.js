@@ -1,11 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-const getRandomNum = (a = 1, b = 20) => {
-  const min = a;
-  const max = b;
-  return Math.floor(Math.random() * (max - min)) + min;
-};
+const getRandomNum = (min = 1, max = 20) => Math.floor(Math.random() * (max - min)) + min;
 
 const getProgression = () => {
   const difference = getRandomNum();

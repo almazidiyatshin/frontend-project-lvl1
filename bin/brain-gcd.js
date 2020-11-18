@@ -1,11 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-const getRandomNum = () => {
-  const min = 1;
-  const max = 20;
-  return Math.floor(Math.random() * (max - min)) + min;
-};
+const getRandomNum = (min = 1, max = 20) => Math.floor(Math.random() * (max - min)) + min;
 
 const askName = () => {
   const name = readlineSync.question('May I have your name? ');
