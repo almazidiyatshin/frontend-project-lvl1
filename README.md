@@ -20,3 +20,8 @@ Game process:
 ##### Start: `make brain-gcd`
 Game process:
 [![asciicast](https://asciinema.org/a/Jli9qn8P13BMAktNwsw55KeSR.svg)](https://asciinema.org/a/Jli9qn8P13BMAktNwsw55KeSR)
+
+## 4. Brain Progression
+##### Start: `make brain-progression`
+Game process:
+[![asciicast](https://asciinema.org/a/lg9KocphAtmmD5QC9xL12S15g.svg)](https://asciinema.org/a/lg9KocphAtmmD5QC9xL12S15g)
