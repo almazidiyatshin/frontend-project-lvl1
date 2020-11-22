@@ -4,7 +4,7 @@
 ![NodeCI](https://github.com/almazidiyatshin/frontend-project-lvl1/workflows/NodeCI/badge.svg)
 
 # Brain Games
-##### Install: `npm install @hexlet/code`
+##### Install: `make install @hexlet/code`
 
 ## 1. Brain Even
 ##### Start: `make brain-even`
