@@ -1,17 +1,17 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "![Actions Status](/workflows/hexlet-check/badge.svg)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Five brain-boosting console games. Each game asks questions that need to be answered correctly.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/almazidiyatshin/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": {
+    "name": "Almaz Idiyatshin",
+    "email": "dev@tshin.ru"
+  },
   "license": "ISC",
+  "keywords": ["games", "console", "puzzle"],
   "bugs": {
     "url": "https://github.com/almazidiyatshin/frontend-project-lvl1/issues"
   },
