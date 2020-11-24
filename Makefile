@@ -27,6 +27,3 @@ lint:
 
 run:
 	bin/nodejs-package.js 10
-	
-install-deps:
-	npm ci
