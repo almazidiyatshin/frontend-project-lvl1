@@ -1,5 +1,5 @@
 install:
-	npm install
+	npm ci
 
 brain-games:
 	node bin/brain-games.js
@@ -24,6 +24,3 @@ publish:
 
 lint:
 	npx eslint .
-
-run:
-	bin/nodejs-package.js 10

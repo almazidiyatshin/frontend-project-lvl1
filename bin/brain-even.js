@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import askQuestions from '../games/brain-even-module.js';
+import startGame from '../src/index.js';
+import { brainEvenRules, brainEvenCorrectAnswer, brainEvenQuestion } from '../src/games/brain-even-module.js';
 
-askQuestions();
+startGame(brainEvenRules, brainEvenQuestion, brainEvenCorrectAnswer);

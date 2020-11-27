@@ -1,12 +1,13 @@
 import readlineSync from 'readline-sync';
-import { getRandomNum, askName } from '../src/index.js';
+import getRandomNum from '../index.js';
+import askName from '../cli.js';
 
-const getProgression = () => {
+const getProgression = (progressionLength = 10) => {
   const difference = getRandomNum();
   const startProgression = getRandomNum();
   const result = [startProgression];
   const iter = (count) => {
-    if (count === 10) {
+    if (count === progressionLength) {
       return result;
     }
     result.push(result[count - 1] + difference);
@@ -16,23 +17,24 @@ const getProgression = () => {
 };
 
 const getProgressionWithoutElement = (hiddenItem) => {
-  const hiddenIndex = getRandomNum(0, 9);
   const progression = getProgression();
+  const hiddenIndex = getRandomNum(0, progression.length - 1);
   const temp = hiddenItem;
   temp[0] = progression[hiddenIndex];
   progression[hiddenIndex] = '..';
   return progression.join(' ');
 };
 
-const askQuestions = () => {
+const startBrainProgressionGame = () => {
   const name = askName();
   console.log('What number is missing in the progression?');
+  const maxCountRound = 3;
   const iter = (count) => {
-    if (count < 3) {
+    if (count < maxCountRound) {
       const hiddenItem = [];
       const progression = getProgressionWithoutElement(hiddenItem);
-      const answer = readlineSync.question(`Question: ${progression}\n`);
-      console.log(`Your answer: ${answer}`);
+      console.log(`Question: ${progression}`);
+      const answer = readlineSync.question('Your answer: ');
       if (Number(answer) !== hiddenItem[0]) {
         console.log(`'${answer}' is wrong answer ;(. Correct answer was ${hiddenItem}. Let's try again, ${name}!"`);
       }
@@ -48,4 +50,4 @@ const askQuestions = () => {
   return iter(0);
 };
 
-export default askQuestions;
+export default startBrainProgressionGame;

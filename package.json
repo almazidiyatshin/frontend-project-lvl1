@@ -11,7 +11,11 @@
     "email": "dev@tshin.ru"
   },
   "license": "ISC",
-  "keywords": ["games", "console", "puzzle"],
+  "keywords": [
+    "games",
+    "console",
+    "puzzle"
+  ],
   "bugs": {
     "url": "https://github.com/almazidiyatshin/frontend-project-lvl1/issues"
   },
@@ -26,7 +30,6 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "dependencies": {
-    "promptly": "^3.2.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {

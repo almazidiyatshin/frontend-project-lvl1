@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
-import { getRandomNum, askName } from '../src/index.js';
+import getRandomNum from '../index.js';
+import askName from '../cli.js';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -13,14 +14,15 @@ const isPrime = (number) => {
   return true;
 };
 
-const askQuestions = () => {
+const startBrainPrimeGame = () => {
   const name = askName();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  const maxCountRound = 3;
   const iter = (count) => {
-    if (count < 3) {
+    if (count < maxCountRound) {
       const randomNumber = getRandomNum();
-      const answer = readlineSync.question(`Question: ${randomNumber}\n`);
-      console.log(`Your answer: ${answer}`);
+      console.log(`Question: ${randomNumber}`);
+      const answer = readlineSync.question('Your answer: ');
       if (answer !== 'yes' && answer !== 'no') {
         console.log(`'${answer}' is wrong answer ;(. Let's try again, ${name}!"`);
       }
@@ -46,4 +48,4 @@ const askQuestions = () => {
   return iter(0);
 };
 
-export default askQuestions;
+export default startBrainPrimeGame;
