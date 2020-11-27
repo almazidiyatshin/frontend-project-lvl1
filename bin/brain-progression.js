@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import startBrainProgressionGame from '../src/games/brain-progression-module.js';
+import startGame from '../src/index.js';
+import { brainProgressionRules, brainProgressionCorrectAnswer, brainProgressionQuestion } from '../src/games/brain-progression-module.js';
 
-startBrainProgressionGame();
+startGame(brainProgressionRules, brainProgressionQuestion, brainProgressionCorrectAnswer);

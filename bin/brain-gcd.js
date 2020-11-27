@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import startBrainGcdGame from '../src/games/brain-gcd-module.js';
+import startGame from '../src/index.js';
+import { brainGcdRules, brainGcdCorrectAnswer, brainGcdQuestion } from '../src/games/brain-gcd-module.js';
 
-startBrainGcdGame();
+startGame(brainGcdRules, brainGcdQuestion, brainGcdCorrectAnswer);

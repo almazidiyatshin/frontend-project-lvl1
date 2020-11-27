@@ -1,6 +1,4 @@
-import readlineSync from 'readline-sync';
-import getRandomNum from '../index.js';
-import askName from '../cli.js';
+import { getRandomNum } from '../index.js';
 
 const getProgression = (progressionLength = 10) => {
   const difference = getRandomNum();
@@ -16,38 +14,36 @@ const getProgression = (progressionLength = 10) => {
   return iter(1);
 };
 
-const getProgressionWithoutElement = (hiddenItem) => {
+const getProgressionWithoutElement = () => {
   const progression = getProgression();
-  const hiddenIndex = getRandomNum(0, progression.length - 1);
-  const temp = hiddenItem;
-  temp[0] = progression[hiddenIndex];
-  progression[hiddenIndex] = '..';
+  const hiddenElementIndex = getRandomNum(0, progression.length - 1);
+  progression[hiddenElementIndex] = '..';
   return progression.join(' ');
 };
 
-const startBrainProgressionGame = () => {
-  const name = askName();
-  console.log('What number is missing in the progression?');
-  const maxCountRound = 3;
-  const iter = (count) => {
-    if (count < maxCountRound) {
-      const hiddenItem = [];
-      const progression = getProgressionWithoutElement(hiddenItem);
-      console.log(`Question: ${progression}`);
-      const answer = readlineSync.question('Your answer: ');
-      if (Number(answer) !== hiddenItem[0]) {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was ${hiddenItem}. Let's try again, ${name}!"`);
-      }
-      if (Number(answer) === hiddenItem[0]) {
-        console.log('Correct!');
-        iter(count + 1);
-      }
+export const brainProgressionRules = () => 'What number is missing in the progression?';
+
+export const brainProgressionCorrectAnswer = (value) => {
+  const arr = value.split(' ');
+
+  let hiddenELementIndex = 0;
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] === '..') {
+      hiddenELementIndex = i;
     }
-    if (count >= 3) {
-      console.log(`Congratulations, ${name}!`);
-    }
-  };
-  return iter(0);
+  }
+
+  let difference = 0;
+  if (hiddenELementIndex > 1) {
+    const prevElement = Number(arr[hiddenELementIndex - 1]);
+    const prevPrevElement = Number(arr[hiddenELementIndex - 2]);
+    difference = prevElement - prevPrevElement;
+    return String(prevElement + difference);
+  }
+  const nextElement = Number(arr[hiddenELementIndex + 1]);
+  const nextNextElement = Number(arr[hiddenELementIndex + 2]);
+  difference = nextNextElement - nextElement;
+  return String(nextElement - difference);
 };
 
-export default startBrainProgressionGame;
+export const brainProgressionQuestion = () => getProgressionWithoutElement();

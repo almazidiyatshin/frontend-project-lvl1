@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import startBrainPrimeGame from '../src/games/brain-prime-module.js';
+import startGame from '../src/index.js';
+import { brainPrimeRules, brainPrimeCorrectAnswer, brainPrimeQuestion } from '../src/games/brain-prime-module.js';
 
-startBrainPrimeGame();
+startGame(brainPrimeRules, brainPrimeQuestion, brainPrimeCorrectAnswer);
