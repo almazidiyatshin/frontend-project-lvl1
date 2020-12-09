@@ -1,12 +1,14 @@
-import runGame, { getRandomNum } from '../index.js';
+import runGame from '../index.js';
+import getRandomNum from '../utils.js';
 
-const brainEvenRules = () => 'Answer "yes" if the number is even, otherwise answer "no".';
+const brainEvenRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const brainEvenData = () => {
-  const num = getRandomNum();
-  const question = num;
-  const answer = num % 2 === 0 ? 'yes' : 'no';
+const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
+
+const getBrainEvenData = () => {
+  const question = getRandomNum();
+  const answer = isEven(question);
   return [question, answer];
 };
 
-export default () => runGame(brainEvenRules, brainEvenData);
+export default () => runGame(brainEvenRules, getBrainEvenData);

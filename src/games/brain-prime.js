@@ -1,4 +1,5 @@
-import runGame, { getRandomNum } from '../index.js';
+import runGame from '../index.js';
+import getRandomNum from '../utils.js';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -12,13 +13,12 @@ const isPrime = (number) => {
   return true;
 };
 
-const brainPrimeRules = () => 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const brainPrimeRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const brainPrimeData = () => {
-  const num = getRandomNum();
-  const question = num;
-  const answer = isPrime(num) ? 'yes' : 'no';
+const getBrainPrimeData = () => {
+  const question = getRandomNum();
+  const answer = isPrime(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
-export default () => runGame(brainPrimeRules, brainPrimeData);
+export default () => runGame(brainPrimeRules, getBrainPrimeData);

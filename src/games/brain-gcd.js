@@ -1,20 +1,21 @@
-import runGame, { getRandomNum } from '../index.js';
+import runGame from '../index.js';
+import getRandomNum from '../utils.js';
 
-const gcd = (a, b) => {
+const findGcd = (a, b) => {
   if (b === 0) {
     return a;
   }
-  return gcd(b, a % b);
+  return findGcd(b, a % b);
 };
 
-const brainGcdRules = () => 'Find the greatest common divisor of given numbers.';
+const brainGcdRules = 'Find the greatest common divisor of given numbers.';
 
-const brainGcdData = () => {
+const getBrainGcdData = () => {
   const num1 = getRandomNum();
   const num2 = getRandomNum();
   const question = `${num1} ${num2}`;
-  const answer = String(gcd(num1, num2));
+  const answer = String(findGcd(num1, num2));
   return [question, answer];
 };
 
-export default () => runGame(brainGcdRules, brainGcdData);
+export default () => runGame(brainGcdRules, getBrainGcdData);

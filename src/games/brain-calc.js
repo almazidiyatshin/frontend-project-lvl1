@@ -1,8 +1,9 @@
-import runGame, { getRandomNum } from '../index.js';
+import runGame from '../index.js';
+import getRandomNum from '../utils.js';
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
-  const randomIndex = getRandomNum(0, operators.length);
+  const randomIndex = getRandomNum(0, operators.length - 1);
   return operators[randomIndex];
 };
 
@@ -19,9 +20,9 @@ const getOperation = (operator) => {
   }
 };
 
-const brainCalcRules = () => 'What is the result of the expression?';
+const brainCalcRules = 'What is the result of the expression?';
 
-const brainCalcData = () => {
+const getBrainCalcData = () => {
   const num1 = getRandomNum();
   const num2 = getRandomNum();
   const operator = getRandomOperator();
@@ -30,4 +31,4 @@ const brainCalcData = () => {
   return [question, answer];
 };
 
-export default () => runGame(brainCalcRules, brainCalcData);
+export default () => runGame(brainCalcRules, getBrainCalcData);

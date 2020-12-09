@@ -1,31 +1,30 @@
 import readlineSync from 'readline-sync';
 import askName from './cli.js';
 
-export const getRandomNum = (min = 1, max = 20) => Math.floor(Math.random() * (max - min)) + min;
-
-const runGame = (gameRules, gameData) => {
+const runGame = (gameRules, getGameData) => {
   const userName = askName();
-  console.log(gameRules());
+  console.log(gameRules);
 
   const maxCountRound = 3;
 
-  const iter = (currentCount) => {
-    const data = gameData();
-    const question = data[0];
-    const answer = data[1];
+  const iter = (currentRound) => {
+    const data = getGameData();
+    const [question, answer] = data;
 
-    if (currentCount === maxCountRound) {
+    if (currentRound === maxCountRound) {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
+
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer === answer) {
-      console.log('Correct!');
-      iter(currentCount + 1);
-    } else {
+
+    if (userAnswer !== answer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${answer}. Let's try again, ${userName}!"`);
+      return;
     }
+    console.log('Correct!');
+    iter(currentRound + 1);
   };
 
   return iter(0);
