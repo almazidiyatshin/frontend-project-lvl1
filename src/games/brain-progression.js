@@ -1,17 +1,19 @@
 import runGame from '../index.js';
 import getRandomNum from '../utils.js';
 
-const getProgression = (progressionLength = 10) => {
-  const stepProgression = getRandomNum();
-  const startProgression = getRandomNum();
+const getProgression = (progressionStep = 10, progressionStart = 10, progressionLength = 10) => {
   const iter = (count, acc) => {
+    if (count === 0) {
+      const startAcc = acc.concat(progressionStart);
+      return iter(count + 1, startAcc);
+    }
     if (count === progressionLength) {
       return acc;
     }
-    const newAcc = acc.concat(acc[count - 1] + stepProgression);
+    const newAcc = acc.concat(acc[count - 1] + progressionStep);
     return iter(count + 1, newAcc);
   };
-  return iter(1, [startProgression]);
+  return iter(0, []);
 };
 
 const getProgressionWithHiddenElement = (progression, index) => {
@@ -20,14 +22,14 @@ const getProgressionWithHiddenElement = (progression, index) => {
   return newProgression.join(' ');
 };
 
-const brainProgressionRules = 'What number is missing in the progression?';
+const brainProgressionRule = 'What number is missing in the progression?';
 
 const getBrainProgressionData = () => {
-  const progression = getProgression();
+  const progression = getProgression(getRandomNum(), getRandomNum());
   const hiddenElementIndex = getRandomNum(0, progression.length - 1);
   const question = getProgressionWithHiddenElement(progression, hiddenElementIndex);
   const answer = String(progression[hiddenElementIndex]);
   return [question, answer];
 };
 
-export default () => runGame(brainProgressionRules, getBrainProgressionData);
+export default () => runGame(brainProgressionRule, getBrainProgressionData);

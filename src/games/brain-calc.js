@@ -20,7 +20,7 @@ const getOperation = (operator) => {
   }
 };
 
-const brainCalcRules = 'What is the result of the expression?';
+const brainCalcRule = 'What is the result of the expression?';
 
 const getBrainCalcData = () => {
   const num1 = getRandomNum();
@@ -31,4 +31,4 @@ const getBrainCalcData = () => {
   return [question, answer];
 };
 
-export default () => runGame(brainCalcRules, getBrainCalcData);
+export default () => runGame(brainCalcRule, getBrainCalcData);

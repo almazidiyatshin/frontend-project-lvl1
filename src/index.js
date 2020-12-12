@@ -1,9 +1,14 @@
 import readlineSync from 'readline-sync';
-import askName from './cli.js';
 
-const runGame = (gameRules, getGameData) => {
-  const userName = askName();
-  console.log(gameRules);
+const greet = () => {
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  return name;
+};
+
+const runGame = (gameRule, getGameData) => {
+  const userName = greet();
+  console.log(gameRule);
 
   const maxCountRound = 3;
 
@@ -20,7 +25,7 @@ const runGame = (gameRules, getGameData) => {
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== answer) {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${answer}. Let's try again, ${userName}!"`);
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${answer}.\nLet's try again, ${userName}!"`);
       return;
     }
     console.log('Correct!');

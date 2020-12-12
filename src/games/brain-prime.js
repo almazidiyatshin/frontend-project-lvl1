@@ -13,7 +13,7 @@ const isPrime = (number) => {
   return true;
 };
 
-const brainPrimeRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const brainPrimeRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getBrainPrimeData = () => {
   const question = getRandomNum();
@@ -21,4 +21,4 @@ const getBrainPrimeData = () => {
   return [question, answer];
 };
 
-export default () => runGame(brainPrimeRules, getBrainPrimeData);
+export default () => runGame(brainPrimeRule, getBrainPrimeData);
